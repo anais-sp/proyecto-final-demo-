@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+  <rect width="560" height="380" rx="32" fill="#E3F7F2"/>
+  <circle cx="470" cy="70" r="120" fill="#CFF0E8"/>
+  <!-- Piso -->
+  <rect y="300" width="560" height="80" fill="#C9EBE2"/>
+  <!-- Monitor con radiografía -->
+  <rect x="70" y="70" width="270" height="180" rx="16" fill="#0B2C2F"/>
+  <rect x="84" y="84" width="242" height="152" rx="8" fill="#12474B"/>
+  <path d="M110 190C110 150 130 130 148 148C160 158 164 150 176 150C190 150 194 158 206 148C224 130 244 150 244 190" fill="none" stroke="#9BE5D6" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#E3F7F2" stroke="#9BE5D6" stroke-width="3" stroke-linejoin="round">
+    <path d="M118 170c0-14 8-20 14-18s8 6 8 18-4 30-10 30-12-16-12-30z"/>
+    <path d="M152 168c0-14 8-20 14-18s8 6 8 18-4 30-10 30-12-16-12-30z"/>
+    <path d="M186 168c0-14 8-20 14-18s8 6 8 18-4 30-10 30-12-16-12-30z"/>
+    <path d="M220 170c0-14 8-20 14-18s8 6 8 18-4 30-10 30-12-16-12-30z"/>
+  </g>
+  <rect x="190" y="250" width="30" height="34" fill="#0B2C2F"/>
+  <rect x="150" y="282" width="110" height="14" rx="7" fill="#0B2C2F"/>
+  <!-- Lámpara -->
+  <path d="M470 300V150Q470 100 420 96" fill="none" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="404" cy="104" rx="42" ry="18" fill="#FFFFFF" stroke="#0F766E" stroke-width="6"/>
+  <path d="M378 118L350 170M404 122L404 176M430 118L458 170" stroke="#F5B301" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <rect x="440" y="296" width="60" height="12" rx="6" fill="#0F766E"/>
+  <!-- Planta -->
+  <rect x="360" y="260" width="40" height="40" rx="8" fill="#0F766E"/>
+  <path d="M380 260C366 236 368 216 376 204C390 220 392 240 380 260ZM380 260C394 240 408 236 420 236C416 252 400 262 380 260Z" fill="#14B8A6"/>
+</svg>

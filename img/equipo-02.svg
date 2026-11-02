@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#FDEBC8"/>
+  <circle cx="80" cy="90" r="90" fill="#FADFA6"/>
+  <!-- Bata -->
+  <path d="M60 400C64 330 110 300 160 292H240C290 300 336 330 340 400Z" fill="#FFFFFF"/>
+  <path d="M160 292L200 350L240 292Z" fill="#0F766E"/>
+  <path d="M240 292L218 330L232 400H340C336 330 290 300 240 292Z" fill="#F1F7F6"/>
+  <!-- Cuello y rostro -->
+  <rect x="180" y="250" width="40" height="52" rx="14" fill="#B97C57"/>
+  <ellipse cx="200" cy="190" rx="62" ry="72" fill="#C98E69"/>
+  <!-- Cabello corto -->
+  <path d="M136 176C130 110 168 88 202 88C240 88 272 112 264 176C254 142 236 128 200 128C168 128 148 144 136 176Z" fill="#1F1512"/>
+  <!-- Barba -->
+  <path d="M142 214C150 270 176 276 200 276S250 270 258 214C244 240 226 246 200 246S156 240 142 214Z" fill="#1F1512"/>
+  <!-- Rostro -->
+  <circle cx="176" cy="192" r="5" fill="#1F1512"/>
+  <circle cx="224" cy="192" r="5" fill="#1F1512"/>
+  <path d="M184 232Q200 244 216 232" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <!-- Estetoscopio -->
+  <path d="M252 300C262 340 242 372 200 372" fill="none" stroke="#0B2C2F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="196" cy="372" r="11" fill="#14B8A6" stroke="#0B2C2F" stroke-width="4"/>
+</svg>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonrisa Viva | Centro odontológico en San Isidro</title>
+  <meta name="description" content="Sonrisa Viva, centro odontológico en San Isidro, Lima. Limpieza, ortodoncia, implantes, odontopediatría y estética dental con presupuesto cerrado.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!--
+    Fuentes: Google Fonts (Poppins e Inter), licencia libre SIL OFL.
+    Imágenes: ilustraciones SVG de elaboración propia (carpeta img/), sin fotografías de terceros.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href=" p" rel="stylesheet">
+
+  <!-- Hoja de estilos externa (después de las tipografías) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO FIJO -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="logo" href="#inicio" aria-label="Sonrisa Viva, ir al inicio">
+        <img class="logo__imagen" src="img/logo.svg" alt="Logotipo de Sonrisa Viva: un diente blanco sobre fondo verde" width="48" height="48">
+        <span class="logo__texto">Sonrisa <span class="logo__acento">Viva</span></span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="#servicios">Servicios</a></li>
+          <li><a class="menu__enlace" href="#nosotros">Nosotros</a></li>
+          <li><a class="menu__enlace" href="#equipo">Equipo</a></li>
+          <li><a class="menu__enlace" href="#testimonios">Testimonios</a></li>
+          <li><a class="menu__enlace" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="boton boton--primario encabezado__boton" href="#contacto">Reservar cita</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PORTADA (HERO) -->
+    <section class="hero" id="inicio">
+      <div class="contenedor hero__grid">
+        <div class="hero__contenido">
+          <p class="etiqueta">Centro odontológico en San Isidro</p>
+          <h1 class="hero__titulo">Tu sonrisa merece un cuidado <span class="resaltado">de verdad</span></h1>
+          <p class="hero__texto">Somos un equipo de especialistas que combina tecnología digital y trato humano para que cada visita sea tranquila, clara y sin sorpresas en el presupuesto.</p>
+
+          <div class="hero__acciones">
+            <a class="boton boton--primario" href="#contacto">Reserva tu cita <span aria-hidden="true">→</span></a>
+            <a class="boton boton--contorno" href="#servicios">Ver servicios</a>
+          </div>
+
+          <ul class="hero__datos">
+            <li class="dato">
+              <span class="dato__cifra">+12</span>
+              <span class="dato__texto">años de experiencia</span>
+            </li>
+            <li class="dato">
+              <span class="dato__cifra">4.9/5</span>
+              <span class="dato__texto">320 reseñas</span>
+            </li>
+            <li class="dato">
+              <span class="dato__cifra">9</span>
+              <span class="dato__texto">especialistas</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <img class="hero__imagen" src="img/hero-odontologia.svg" alt="Ilustración de un diente sonriente rodeado de tarjetas con la valoración 4.9 de 5, la confirmación de cita y el horario de lunes a sábado" width="620" height="560">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="seccion seccion--blanca" id="servicios">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <p class="sobretitulo">Servicios</p>
+          <h2 class="seccion__titulo">Tratamientos para toda la familia</h2>
+          <p class="seccion__texto">Desde la limpieza de rutina hasta la rehabilitación completa. Cada tratamiento empieza con un diagnóstico y un presupuesto explicado sin tecnicismos.</p>
+        </header>
+
+        <div class="servicios__grid">
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-limpieza.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Limpieza dental</h3>
+            <p class="servicio__texto">Eliminamos placa y sarro con ultrasonido y terminamos con un pulido que protege el esmalte.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Desde S/ 80</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-ortodoncia.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Ortodoncia</h3>
+            <p class="servicio__texto">Brackets metálicos, estéticos y alineadores transparentes con controles cada cuatro semanas.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Desde S/ 1 200</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-implantes.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Implantes dentales</h3>
+            <p class="servicio__texto">Reemplazamos piezas perdidas con implantes de titanio y coronas a medida, planificados en 3D.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Desde S/ 2 500</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-odontopediatria.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Odontopediatría</h3>
+            <p class="servicio__texto">Consultas sin miedo: explicamos cada paso con juegos y premios para los más pequeños.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Desde S/ 70</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-estetica.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Estética dental</h3>
+            <p class="servicio__texto">Blanqueamiento con luz fría y carillas de porcelana para un resultado natural, no artificial.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Desde S/ 350</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+
+          <article class="servicio">
+            <img class="servicio__icono" src="img/icono-urgencias.svg" alt="" width="64" height="64">
+            <h3 class="servicio__titulo">Urgencias</h3>
+            <p class="servicio__texto">Dolor agudo, fracturas o sangrado: reservamos un espacio el mismo día para atenderte.</p>
+            <div class="servicio__pie">
+              <span class="servicio__precio">Atención inmediata</span>
+              <a class="servicio__enlace" href="#contacto">Reservar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor nosotros__grid">
+        <div class="nosotros__contenido">
+          <p class="sobretitulo">Sobre nosotros</p>
+          <h2 class="seccion__titulo">Tecnología y calidez en un mismo lugar</h2>
+          <p class="seccion__texto">Nuestro consultorio está diseñado para que dejes de asociar al dentista con estrés. Trabajamos con radiografía digital, cámaras intraorales y esterilización certificada.</p>
+
+          <img class="nosotros__imagen" src="img/sobre-nosotros.svg" alt="Ilustración del consultorio con un monitor que muestra una radiografía digital, una lámpara dental y una planta" width="560" height="380">
+
+          <div class="destacado">
+            <span class="destacado__cifra">+12</span>
+            <span class="destacado__texto">años cuidando sonrisas en Lima</span>
+          </div>
+        </div>
+
+        <ul class="beneficios">
+          <li class="beneficio">
+            <span class="beneficio__numero">01</span>
+            <div class="beneficio__cuerpo">
+              <h3 class="beneficio__titulo">Diagnóstico digital</h3>
+              <p class="beneficio__texto">Radiografía y fotografía intraoral para ver exactamente lo que ocurre antes de tratar.</p>
+            </div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__numero">02</span>
+            <div class="beneficio__cuerpo">
+              <h3 class="beneficio__titulo">Presupuesto cerrado</h3>
+              <p class="beneficio__texto">Conoces el costo completo antes de empezar. Sin cargos adicionales a mitad del tratamiento.</p>
+            </div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__numero">03</span>
+            <div class="beneficio__cuerpo">
+              <h3 class="beneficio__titulo">Bioseguridad</h3>
+              <p class="beneficio__texto">Protocolos de esterilización y materiales de un solo uso en cada procedimiento.</p>
+            </div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__numero">04</span>
+            <div class="beneficio__cuerpo">
+              <h3 class="beneficio__titulo">Financiamiento</h3>
+              <p class="beneficio__texto">Puedes dividir tratamientos largos en cuotas sin intereses con tarjetas participantes.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="seccion seccion--blanca" id="equipo">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <p class="sobretitulo">Nuestro equipo</p>
+          <h2 class="seccion__titulo">Especialistas que te explican cada paso</h2>
+          <p class="seccion__texto">Cada doctora y doctor tiene su especialidad, pero todos comparten la misma regla: nada se hace sin que entiendas por qué.</p>
+        </header>
+
+        <div class="equipo__grid">
+          <article class="especialista">
+            <img class="especialista__foto" src="img/equipo-01.svg" alt="Ilustración de la doctora Camila Rojas, ortodoncista, con bata blanca y estetoscopio" width="400" height="400">
+            <h3 class="especialista__nombre">Dra. Camila Rojas</h3>
+            <p class="especialista__cargo">Ortodoncista · COP 45812</p>
+            <ul class="etiquetas">
+              <li class="etiquetas__item">Brackets</li>
+              <li class="etiquetas__item">Alineadores</li>
+            </ul>
+          </article>
+
+          <article class="especialista">
+            <img class="especialista__foto" src="img/equipo-02.svg" alt="Ilustración del doctor Andrés Salazar, especialista en implantología, con bata blanca y estetoscopio" width="400" height="400">
+            <h3 class="especialista__nombre">Dr. Andrés Salazar</h3>
+            <p class="especialista__cargo">Implantología · COP 39107</p>
+            <ul class="etiquetas">
+              <li class="etiquetas__item">Implantes</li>
+              <li class="etiquetas__item">Cirugía</li>
+            </ul>
+          </article>
+
+          <article class="especialista">
+            <img class="especialista__foto" src="img/equipo-03.svg" alt="Ilustración de la doctora Lucía Mendoza, odontopediatra, con bata blanca y estetoscopio" width="400" height="400">
+            <h3 class="especialista__nombre">Dra. Lucía Mendoza</h3>
+            <p class="especialista__cargo">Odontopediatría · COP 50236</p>
+            <ul class="etiquetas">
+              <li class="etiquetas__item">Niños</li>
+              <li class="etiquetas__item">Prevención</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="seccion" id="testimonios">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <p class="sobretitulo">Testimonios</p>
+          <h2 class="seccion__titulo">Lo que dicen nuestros pacientes</h2>
+        </header>
+
+        <div class="testimonios__grid">
+          <article class="testimonio">
+            <p class="testimonio__estrellas" aria-label="Calificación: 5 de 5 estrellas">★★★★★</p>
+            <p class="testimonio__texto">«Llegué con mucho miedo por una muela y salí riéndome. Me explicaron la radiografía en la pantalla y el presupuesto fue exacto.»</p>
+            <div class="testimonio__autor">
+              <span class="avatar" aria-hidden="true">MR</span>
+              <div class="testimonio__datos">
+                <strong class="testimonio__nombre">María Ramos</strong>
+                <span class="testimonio__detalle">Paciente desde 2022</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonio">
+            <p class="testimonio__estrellas" aria-label="Calificación: 5 de 5 estrellas">★★★★★</p>
+            <p class="testimonio__texto">«Mi hija de seis años entra sola al consultorio. La doctora Mendoza le explica todo con juegos y nunca la apura.»</p>
+            <div class="testimonio__autor">
+              <span class="avatar" aria-hidden="true">JP</span>
+              <div class="testimonio__datos">
+                <strong class="testimonio__nombre">Jorge Paredes</strong>
+                <span class="testimonio__detalle">Papá de paciente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonio">
+            <p class="testimonio__estrellas" aria-label="Calificación: 5 de 5 estrellas">★★★★★</p>
+            <p class="testimonio__texto">«Terminé mi tratamiento de ortodoncia en 18 meses. Las citas siempre fueron puntuales, algo que agradezco muchísimo.»</p>
+            <div class="testimonio__autor">
+              <span class="avatar" aria-hidden="true">AC</span>
+              <div class="testimonio__datos">
+                <strong class="testimonio__nombre">Ana Cecilia Torres</strong>
+                <span class="testimonio__detalle">Ortodoncia finalizada</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion seccion--blanca" id="contacto">
+      <div class="contenedor contacto__grid">
+        <div class="contacto__info">
+          <p class="sobretitulo">Reserva tu cita</p>
+          <h2 class="seccion__titulo">Agenda en menos de un minuto</h2>
+          <p class="seccion__texto">Completa el formulario y te confirmamos el horario por WhatsApp. Si prefieres, también puedes llamarnos directamente.</p>
+
+          <ul class="contacto__lista">
+            <li class="contacto__dato">
+              <span class="contacto__icono"><img src="img/icono-ubicacion.svg" alt="" width="24" height="24"></span>
+              <div class="contacto__cuerpo">
+                <span class="contacto__etiqueta">Dirección</span>
+                <span class="contacto__valor">Av. Los Jardines 245, San Isidro, Lima</span>
+              </div>
+            </li>
+            <li class="contacto__dato">
+              <span class="contacto__icono"><img src="img/icono-telefono.svg" alt="" width="24" height="24"></span>
+              <div class="contacto__cuerpo">
+                <span class="contacto__etiqueta">Teléfono</span>
+                <a class="contacto__valor" href="tel:+51987654321">+51 987 654 321</a>
+              </div>
+            </li>
+            <li class="contacto__dato">
+              <span class="contacto__icono"><img src="img/icono-correo.svg" alt="" width="24" height="24"></span>
+              <div class="contacto__cuerpo">
+                <span class="contacto__etiqueta">Correo</span>
+                <a class="contacto__valor" href="mailto:citas@sonrisaviva.pe">citas@sonrisaviva.pe</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="horarios">
+            <h3 class="horarios__titulo">Horario de atención</h3>
+            <ul class="horarios__lista">
+              <li class="horarios__fila"><span>Lunes a viernes</span><span class="horarios__hora">8:00 – 20:00</span></li>
+              <li class="horarios__fila"><span>Sábados</span><span class="horarios__hora">8:00 – 14:00</span></li>
+              <li class="horarios__fila"><span>Domingos</span><span class="horarios__hora">Solo urgencias</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="formulario" action="mailto:citas@sonrisaviva.pe" method="post" enctype="text/plain">
+          <h3 class="formulario__titulo">Datos de la cita</h3>
+
+          <div class="formulario__grid">
+            <div class="campo campo--ancho">
+              <label class="campo__etiqueta" for="nombre">Nombre completo</label>
+              <input class="campo__control" type="text" id="nombre" name="nombre" placeholder="Ana Pérez" required>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="telefono">Teléfono</label>
+              <input class="campo__control" type="tel" id="telefono" name="telefono" placeholder="987 654 321" required>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="correo">Correo electrónico</label>
+              <input class="campo__control" type="email" id="correo" name="correo" placeholder="ana@correo.com" required>
+            </div>
+
+            <div class="campo campo--ancho">
+              <label class="campo__etiqueta" for="servicio">Servicio</label>
+              <select class="campo__control" id="servicio" name="servicio">
+                <option>Limpieza dental</option>
+                <option>Ortodoncia</option>
+                <option>Implantes dentales</option>
+                <option>Odontopediatría</option>
+                <option>Estética dental</option>
+                <option>Urgencias</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="fecha">Fecha preferida</label>
+              <input class="campo__control" type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="hora">Hora preferida</label>
+              <input class="campo__control" type="time" id="hora" name="hora" min="08:00" max="20:00" required>
+            </div>
+
+            <div class="campo campo--ancho">
+              <label class="campo__etiqueta" for="mensaje">Cuéntanos qué necesitas</label>
+              <textarea class="campo__control" id="mensaje" name="mensaje" rows="4" placeholder="Tengo dolor en la muela del juicio desde hace dos días..."></textarea>
+            </div>
+
+            <div class="campo campo--ancho">
+              <button class="boton boton--primario boton--completo" type="submit">Solicitar cita</button>
+              <p class="formulario__nota">Te confirmamos por WhatsApp en menos de 2 horas hábiles.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__grid">
+        <div class="pie__marca">
+          <a class="logo logo--claro" href="#inicio" aria-label="Sonrisa Viva, ir al inicio">
+            <img class="logo__imagen" src="img/logo.svg" alt="Logotipo de Sonrisa Viva" width="48" height="48">
+            <span class="logo__texto">Sonrisa <span class="logo__acento">Viva</span></span>
+          </a>
+          <p class="pie__texto">Centro odontológico integral en San Isidro. Cuidamos tu salud bucal con tecnología digital y un trato cercano, desde 2014.</p>
+          <ul class="redes">
+            <li><a class="redes__enlace" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a class="redes__enlace" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a class="redes__enlace" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          </ul>
+        </div>
+
+        <div class="pie__columna">
+          <h3 class="pie__titulo">Servicios</h3>
+          <ul class="pie__lista">
+            <li><a class="pie__enlace" href="#servicios">Limpieza dental</a></li>
+            <li><a class="pie__enlace" href="#servicios">Ortodoncia</a></li>
+            <li><a class="pie__enlace" href="#servicios">Implantes</a></li>
+            <li><a class="pie__enlace" href="#servicios">Odontopediatría</a></li>
+            <li><a class="pie__enlace" href="#servicios">Estética dental</a></li>
+          </ul>
+        </div>
+
+        <div class="pie__columna">
+          <h3 class="pie__titulo">Horarios</h3>
+          <ul class="pie__lista">
+            <li>Lun – Vie 8:00 – 20:00</li>
+            <li>Sábados 8:00 – 14:00</li>
+            <li>Domingos Urgencias</li>
+          </ul>
+        </div>
+
+        <div class="pie__columna">
+          <h3 class="pie__titulo">Contacto</h3>
+          <ul class="pie__lista">
+            <li>Av. Los Jardines 245</li>
+            <li>San Isidro, Lima</li>
+            <li><a class="pie__enlace" href="tel:+51987654321">+51 987 654 321</a></li>
+            <li><a class="pie__enlace" href="mailto:citas@sonrisaviva.pe">citas@sonrisaviva.pe</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pie__legal">© 2026 Sonrisa Viva. Todos los derechos reservados. Proyecto académico · Desarrollo Web · IDAT</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp" href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
+    <img class="whatsapp__icono" src="img/whatsapp.svg" alt="" width="56" height="56">
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" width="620" height="560" font-family="Poppins, Inter, Arial, sans-serif">
+  <defs>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0B2C2F" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E6F8F3"/>
+      <stop offset="1" stop-color="#D3F3EA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect x="40" y="60" width="540" height="450" rx="44" fill="url(#fondo)"/>
+  <circle cx="320" cy="285" r="175" fill="#F6FCFA"/>
+  <circle cx="320" cy="285" r="205" fill="none" stroke="#A7DDD2" stroke-width="2" stroke-dasharray="7 9"/>
+  <circle cx="148" cy="190" r="7" fill="#A7DDD2"/>
+  <circle cx="500" cy="400" r="6" fill="#7CCFC0"/>
+
+  <!-- Diente -->
+  <g transform="translate(228 160)">
+    <path d="M22 46C22 12 58 0 92 14C126 0 162 12 162 46C162 86 142 112 138 162C135 206 128 242 110 242C94 242 96 196 92 176C88 196 90 242 74 242C56 242 49 206 46 162C42 112 22 86 22 46Z" fill="#FFFFFF" stroke="#0F766E" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M62 82Q92 106 122 82" fill="none" stroke="#9BE5D6" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Destellos -->
+  <path d="M0 -16L4.500 -4.500L16 0L4.500 4.500L0 16L-4.500 4.500L-16 0L-4.500 -4.500Z" transform="translate(498 215)" fill="#E8930C"/>
+  <path d="M0 -16L4.500 -4.500L16 0L4.500 4.500L0 16L-4.500 4.500L-16 0L-4.500 -4.500Z" transform="translate(504 335) scale(0.9)" fill="#14B8A6"/>
+  <path d="M0 -16L4.500 -4.500L16 0L4.500 4.500L0 16L-4.500 4.500L-16 0L-4.500 -4.500Z" transform="translate(166 260) scale(0.65)" fill="#F59E0B"/>
+
+  <!-- Tarjeta: valoración -->
+  <g filter="url(#sombra)">
+    <rect x="395" y="82" width="210" height="96" rx="20" fill="#FFFFFF"/>
+  </g>
+  <text x="416" y="116" font-size="20" font-weight="700" fill="#0B2C2F">4.9 de 5</text>
+  <text x="416" y="140" font-size="13.500" fill="#5B7174" font-family="Inter, Arial, sans-serif">320 pacientes felices</text>
+  <text x="416" y="164" font-size="15" fill="#F59E0B" letter-spacing="3">★★★★★</text>
+
+  <!-- Tarjeta: confirmación -->
+  <g filter="url(#sombra)">
+    <rect x="80" y="368" width="228" height="92" rx="20" fill="#FFFFFF"/>
+  </g>
+  <circle cx="122" cy="414" r="19" fill="#CFF5EC"/>
+  <path d="M112 414l7 7 13-14" fill="none" stroke="#0F766E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="156" y="400" width="126" height="9" rx="4.500" fill="#DCE7E5"/>
+  <rect x="156" y="420" width="70" height="9" rx="4.500" fill="#DCE7E5"/>
+
+  <!-- Tarjeta: presupuesto -->
+  <g filter="url(#sombra)">
+    <rect x="388" y="352" width="184" height="112" rx="20" fill="#FFFFFF"/>
+  </g>
+  <rect x="410" y="376" width="62" height="9" rx="4.500" fill="#6BA9A2"/>
+  <rect x="410" y="398" width="140" height="9" rx="4.500" fill="#DCE7E5"/>
+  <rect x="410" y="416" width="110" height="9" rx="4.500" fill="#DCE7E5"/>
+  <circle cx="480" cy="445" r="11" fill="#FDECC8"/>
+  <path d="M475 445l4 4 7-8" fill="none" stroke="#C2410C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Tarjeta: horario -->
+  <g filter="url(#sombra)">
+    <rect x="52" y="452" width="206" height="76" rx="18" fill="#FFFFFF"/>
+  </g>
+  <rect x="68" y="468" width="44" height="44" rx="12" fill="#CFF5EC"/>
+  <circle cx="90" cy="490" r="11" fill="none" stroke="#0F766E" stroke-width="3"/>
+  <path d="M90 483v7l5 3" fill="none" stroke="#0F766E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="126" y="487" font-size="16" font-weight="600" fill="#0B2C2F">Lun a Sáb</text>
+  <text x="126" y="508" font-size="14" fill="#5B7174" font-family="Inter, Arial, sans-serif">8:00 a 20:00</text>
+</svg>

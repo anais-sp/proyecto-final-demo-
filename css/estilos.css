@@ -1,0 +1,1049 @@
+/* ==========================================================================
+   SONRISA VIVA · Centro odontológico
+   Hoja de estilos externa · Proyecto Final · Desarrollo Web · IDAT 2026
+
+   ÍNDICE
+   1. Configuración base (reset, variables, tamaño base, estilos globales)
+   2. Utilidades (contenedor, botones, etiquetas)
+   3. Encabezado (Flexbox)
+   4. Secciones (en el mismo orden que el HTML)
+      4.1 Portada / hero (Grid + Flexbox)
+      4.2 Encabezados de sección
+      4.3 Servicios (Grid + tarjetas con Flexbox)
+      4.4 Sobre nosotros (Grid + filas con Flexbox)
+      4.5 Equipo (Grid + tarjetas con Flexbox)
+      4.6 Testimonios (Grid + tarjetas con Flexbox)
+      4.7 Contacto y formulario (Grid + Flexbox)
+      4.8 Pie de página (Grid + Flexbox)
+      4.9 Botón flotante de WhatsApp
+   5. Responsive (1024 px, 768 px y 480 px, de mayor a menor)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. CONFIGURACIÓN BASE
+   ========================================================================== */
+
+/* Reset universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables del diseño */
+:root {
+  /* Colores */
+  --verde: #0F766E;
+  --verde-oscuro: #0B5D57;
+  --menta: #CCFBF1;
+  --menta-suave: #E3F7F2;
+  --texto: #0B2C2F;
+  --texto-suave: #4B6366;
+  --fondo: #F7FAF9;
+  --blanco: #FFFFFF;
+  --borde: #DCE8E5;
+  --acento: #F59E0B;
+
+  /* Formas y sombras */
+  --radio: 1rem;
+  --radio-grande: 1.5rem;
+  --pildora: 62.5rem;
+  --sombra: 0 18px 40px -24px rgba(11, 44, 47, 0.35);
+  --sombra-boton: 0 14px 24px -14px rgba(15, 118, 110, 0.75);
+
+  /* Tipografías */
+  --fuente-titulos: "Poppins", "Inter", sans-serif;
+  --fuente-texto: "Inter", sans-serif;
+
+  /* Medidas de la maqueta */
+  --ancho-maximo: 75rem;
+  --alto-encabezado: 4.5rem;
+  --espacio-seccion: 5.5rem;
+}
+
+/* Medida base: 1rem = 16px */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--alto-encabezado);
+}
+
+/* Estilos globales */
+body {
+  padding-top: var(--alto-encabezado);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 0.1875rem solid var(--acento);
+  outline-offset: 0.1875rem;
+}
+
+
+/* ==========================================================================
+   2. UTILIDADES
+   ========================================================================== */
+
+/* Contenedor centrado con ancho máximo */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.9rem;
+  border: 0.125rem solid transparent;
+  border-radius: var(--pildora);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton:hover {
+  transform: translateY(-0.125rem);
+}
+
+.boton--primario {
+  background-color: var(--verde);
+  color: var(--blanco);
+  box-shadow: var(--sombra-boton);
+}
+
+.boton--primario:hover {
+  background-color: var(--verde-oscuro);
+}
+
+.boton--contorno {
+  background-color: var(--blanco);
+  border-color: var(--borde);
+  color: var(--texto);
+}
+
+.boton--contorno:hover {
+  border-color: var(--verde);
+}
+
+.boton--completo {
+  width: 100%;
+}
+
+/* Etiqueta tipo "píldora" y sobretítulo de sección */
+.etiqueta {
+  padding: 0.4rem 1rem;
+  border-radius: var(--pildora);
+  background-color: var(--menta);
+  color: var(--verde);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sobretitulo {
+  color: var(--verde);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Texto resaltado con marcador */
+.resaltado {
+  color: var(--verde);
+  background-image: linear-gradient(transparent 72%, var(--menta) 72%);
+}
+
+
+/* ==========================================================================
+   3. ENCABEZADO (Flexbox)
+   Logo a la izquierda, menú al centro y botón al extremo.
+   ========================================================================== */
+
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--borde);
+  backdrop-filter: blur(0.5rem);
+}
+
+.encabezado__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: var(--alto-encabezado);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo__imagen {
+  width: 3rem;
+  height: 3rem;
+}
+
+.logo__texto {
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.logo__acento {
+  color: var(--verde);
+}
+
+.menu__lista {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu__enlace {
+  color: var(--texto-suave);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.menu__enlace:hover {
+  color: var(--verde);
+}
+
+.encabezado__boton {
+  padding: 0.8rem 1.6rem;
+}
+
+
+/* ==========================================================================
+   4. SECCIONES
+   ========================================================================== */
+
+/* ---------- 4.1 Portada (hero) ---------- */
+
+.hero {
+  padding-block: 4rem var(--espacio-seccion);
+  background-image: linear-gradient(180deg, var(--menta-suave) 0%, var(--fondo) 100%);
+}
+
+/* Grid de dos columnas iguales */
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.hero__titulo {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero__texto {
+  max-width: 34rem;
+  font-size: 1.125rem;
+  color: var(--texto-suave);
+}
+
+.hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  width: 100%;
+  max-width: 34rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borde);
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+}
+
+.dato__cifra {
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--verde);
+}
+
+.dato__texto {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.hero__imagen {
+  width: 100%;
+}
+
+/* ---------- 4.2 Encabezados de sección ---------- */
+
+.seccion {
+  padding-block: var(--espacio-seccion);
+}
+
+.seccion--blanca {
+  background-color: var(--blanco);
+}
+
+.seccion__cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 42rem;
+  margin-bottom: 3rem;
+}
+
+.seccion__titulo {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.seccion__texto {
+  color: var(--texto-suave);
+  font-size: 1.0625rem;
+}
+
+/* ---------- 4.3 Servicios ---------- */
+
+/* Escritorio: 3 columnas iguales */
+.servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tarjeta: contenido en columna y pie siempre abajo */
+.servicio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.75rem;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--sombra);
+}
+
+.servicio__icono {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.7rem;
+  background-color: var(--menta);
+  border-radius: var(--radio);
+}
+
+.servicio__titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.servicio__texto {
+  flex-grow: 1;
+  color: var(--texto-suave);
+}
+
+.servicio__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--borde);
+}
+
+.servicio__precio {
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.servicio__enlace {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--verde);
+  border-radius: var(--pildora);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--verde);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.servicio__enlace:hover {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+/* ---------- 4.4 Sobre nosotros ---------- */
+
+.nosotros__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.nosotros__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.nosotros__imagen {
+  width: 100%;
+  border-radius: var(--radio-grande);
+}
+
+.destacado {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.destacado__cifra {
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--verde);
+}
+
+.destacado__texto {
+  font-weight: 500;
+  color: var(--texto-suave);
+}
+
+.beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Filas de número + texto alineadas al inicio */
+.beneficio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+}
+
+.beneficio__numero {
+  flex-shrink: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--verde);
+}
+
+.beneficio__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.beneficio__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.beneficio__texto {
+  color: var(--texto-suave);
+}
+
+/* ---------- 4.5 Equipo ---------- */
+
+.equipo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.especialista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1rem 1.75rem;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+}
+
+.especialista__foto {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border-radius: var(--radio);
+}
+
+.especialista__nombre {
+  padding-inline: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.especialista__cargo {
+  flex-grow: 1;
+  padding-inline: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem 0;
+}
+
+.etiquetas__item {
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--pildora);
+  background-color: var(--menta);
+  color: var(--verde);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* ---------- 4.6 Testimonios ---------- */
+
+.testimonios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem;
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra);
+}
+
+.testimonio__estrellas {
+  color: var(--acento);
+  letter-spacing: 0.2em;
+}
+
+.testimonio__texto {
+  flex-grow: 1;
+  font-size: 1.0625rem;
+}
+
+.testimonio__autor {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: var(--menta);
+  color: var(--verde);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.testimonio__datos {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.testimonio__nombre {
+  font-weight: 600;
+}
+
+.testimonio__detalle {
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+/* ---------- 4.7 Contacto y formulario ---------- */
+
+.contacto__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+.contacto__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contacto__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Filas de icono + texto alineadas al inicio */
+.contacto__dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contacto__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radio);
+  background-color: var(--menta);
+}
+
+.contacto__cuerpo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.contacto__etiqueta {
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+.contacto__valor {
+  font-weight: 600;
+}
+
+.horarios {
+  padding: 1.5rem;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+}
+
+.horarios__titulo {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.horarios__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.horarios__fila {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--texto-suave);
+}
+
+.horarios__hora {
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.formulario {
+  padding: 2rem;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra);
+}
+
+.formulario__titulo {
+  margin-bottom: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+/* Rejilla interna del formulario: 2 columnas */
+.formulario__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+/* Campo que ocupa las dos columnas de su rejilla */
+.campo--ancho {
+  grid-column: 1 / -1;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo__etiqueta {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.campo__control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 0.75rem;
+}
+
+.campo__control:focus {
+  border-color: var(--verde);
+}
+
+textarea.campo__control {
+  resize: vertical;
+}
+
+.formulario__nota {
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+/* ---------- 4.8 Pie de página ---------- */
+
+.pie {
+  padding-block: 4rem 2rem;
+  background-color: var(--texto);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Grid de cuatro columnas iguales */
+.pie__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.pie__marca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.logo--claro .logo__texto {
+  color: var(--blanco);
+}
+
+.logo--claro .logo__acento {
+  color: #5EEAD4;
+}
+
+.pie__texto {
+  font-size: 0.9375rem;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.redes__enlace {
+  display: block;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--pildora);
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.redes__enlace:hover {
+  background-color: var(--blanco);
+  color: var(--texto);
+}
+
+.pie__columna {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pie__titulo {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+
+.pie__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.pie__enlace:hover {
+  color: var(--blanco);
+  text-decoration: underline;
+}
+
+.pie__legal {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ---------- 4.9 Botón flotante de WhatsApp ---------- */
+
+.whatsapp {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 90;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: var(--sombra-boton);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp__icono {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+
+/* ==========================================================================
+   5. RESPONSIVE (de mayor a menor)
+   ========================================================================== */
+
+/* ---------- Tablet grande: 1024 px ---------- */
+@media (max-width: 1024px) {
+  .menu__lista {
+    gap: 1.25rem;
+  }
+
+  .hero__grid {
+    gap: 2rem;
+  }
+
+  /* 3 → 2 columnas */
+  .servicios__grid,
+  .equipo__grid,
+  .testimonios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La tercera tarjeta ocupa las dos columnas */
+  .especialista:last-child,
+  .testimonio:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .nosotros__grid,
+  .contacto__grid {
+    gap: 2.5rem;
+  }
+
+  .pie__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Tablet: 768 px ---------- */
+@media (max-width: 768px) {
+  :root {
+    --alto-encabezado: 7.5rem;
+    --espacio-seccion: 4rem;
+  }
+
+  /* El menú baja a una segunda fila del encabezado */
+  .encabezado__fila {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding-block: 0.75rem;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+  }
+
+  .menu__lista {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.25rem;
+  }
+
+  .menu__enlace {
+    font-size: 0.9375rem;
+  }
+
+  .encabezado__boton {
+    padding: 0.65rem 1.25rem;
+  }
+
+  /* Todas las rejillas pasan a 1 columna */
+  .hero__grid,
+  .servicios__grid,
+  .nosotros__grid,
+  .equipo__grid,
+  .testimonios__grid,
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .hero__visual {
+    order: -1;
+  }
+
+  .hero__imagen {
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  .formulario {
+    padding: 1.5rem;
+  }
+}
+
+/* ---------- Celular: 480 px ---------- */
+@media (max-width: 480px) {
+  :root {
+    --alto-encabezado: 8rem;
+  }
+
+  .contenedor {
+    padding-inline: 1rem;
+  }
+
+  .logo__texto {
+    font-size: 1.125rem;
+  }
+
+  .hero__acciones .boton {
+    width: 100%;
+  }
+
+  .hero__datos {
+    gap: 1rem 1.5rem;
+  }
+
+  .servicio,
+  .testimonio,
+  .beneficio {
+    padding: 1.25rem;
+  }
+
+  .formulario {
+    padding: 1.25rem;
+  }
+
+  /* El formulario también pasa a 1 columna */
+  .formulario__grid,
+  .pie__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .horarios__fila {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .whatsapp {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
